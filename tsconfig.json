@@ -5,7 +5,7 @@
     "sourceMap": true,                   
     "strict": true,                          
     "esModuleInterop": true ,                  
-    "outDir" : "./outputjs",
+    "outDir" : "./dist",
     "types" : ["jasmine"]
   },
   "exclude": [

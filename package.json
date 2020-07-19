@@ -1,22 +1,44 @@
 {
-  "name": "toolsqaprotractor",
+  "name": "onvio-work-pappers",
   "version": "1.0.0",
-  "description": "",
+  "description": "onvio-work-pappers",
+  "repository": {
+    "type": "git",
+    "url": "https://tr-tax@dev.azure.com/tr-tax/AAFMReleaseManagement/_git/typescript-e2e-workpapers"
+  },
   "main": "index.js",
+  "engines": {
+    "node": ">=10.15.0",
+    "yarn": ">=1.9.0"
+  },
   "scripts": {
-    "tsc": "tsc",
-    "pretest": "npm run tsc",
-    "test": "protractor outputjs/conf.js"
+    "pretest": "rm -rf allure-report",
+    "build": "tsc",
+    "test": "protractor dist/protractor.conf.js",
+    "posttest": "allure generate allure-results --clean -o allure-report || true"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/jasmine": "^3.5.0"
+    "@angular/common": "^9.0.6",
+    "@angular/core": "^9.0.6",
+    "@types/jasmine": "^3.5.2",
+    "allure-commandline": "^2.13.0",
+    "jasmine": "^3.5.0",
+    "jasmine-allure-reporter": "1.0.2",
+    "jasmine-spec-reporter": "^4.2.1",
+    "protractor-html-reporter-2": "^1.0.4",
+    "rxjs": "^6.5.4",
+    "winston": "^3.2.1",
+    "zone.js": "0.10.3"
   },
   "devDependencies": {
-    "@types/node": "~14.0.23",
-    "jasmine": "~3.5.0",
+    "@types/node": "^13.5.3",
+    "chai": "^4.2.0",
     "protractor": "^5.4.3",
-    "typescript": "~3.9.6"
+    "protractor-jasmine-retry": "^1.0.1",
+    "protractor-jasmine2-html-cli-reporter": "^1.0.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.9.2"
   }
 }

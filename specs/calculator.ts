@@ -1,17 +1,16 @@
-import {browser , element, by } from "../node_modules/protractor"
+import { browser, element, by } from "protractor"
 
-describe("Calculator test", function(){
+describe("Calculator test", function () {
 
-    beforeEach(function()
-    {
+    beforeEach(function () {
         browser.get("https://juliemr.github.io/protractor-demo/");
     })
 
-    it("Launch url check", function(){
+    it("Launch url check", function () {
         expect(browser.getTitle()).toContain("Super");
-    
+
     })
-    it("Add 2 numbers", function(){
+    it("Add 2 numbers", function () {
 
         element(by.model("first")).sendKeys("12");
         element(by.model("second")).sendKeys("13");
