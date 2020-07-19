@@ -1,0 +1,22 @@
+{
+  "name": "toolsqaprotractor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "pretest": "npm run tsc",
+    "test": "protractor outputjs/conf.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jasmine": "^3.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "~14.0.23",
+    "jasmine": "~3.5.0",
+    "protractor": "^5.4.3",
+    "typescript": "~3.9.6"
+  }
+}
