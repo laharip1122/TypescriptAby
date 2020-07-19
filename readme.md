@@ -2,7 +2,7 @@
 
 
 # Build Project
-npm install && yarn build
+npm install && tsc --build tsconfig.json
 
 # Run Test Suites
 protractor dist/protractor.conf.js --suite=E2E
