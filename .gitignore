@@ -51,3 +51,7 @@ package-lock.json
 Thumbs.db
 
 protractorFailedSpecs/1.json
+allure-report
+
+allure-report/index.html
+/allure-report
